@@ -7,15 +7,15 @@ terraform {
   }
 }
 
-data "aws_eks_cluster" "hr-dev-eks-demo" {
-  name = "hr-dev-eks-demo"
+data "aws_eks_cluster" "hr-dev-Altschool-Project" {
+  name = "hr-dev-Altschool-Project"
 }
-data "aws_eks_cluster_auth" "hr-dev-eks-demo_auth" {
-  name = "hr-dev-eks-demo_auth"
+data "aws_eks_cluster_auth" "hr-dev-Altschool-Project_auth" {
+  name = "hr-dev-Altschool-Project_auth"
 }
 provider "kubernetes" {
-  host                   = data.aws_eks_cluster.hr-dev-eks-demo.endpoint
-  cluster_ca_certificate = base64decode(data.aws_eks_cluster.hr-dev-eks-demo.certificate_authority[0].data)
+  host                   = data.aws_eks_cluster.hr-dev-Altschool-Project.endpoint
+  cluster_ca_certificate = base64decode(data.aws_eks_cluster.hr-dev-Altschool-Project.certificate_authority[0].data)
   version          = "2.16.1"
   config_path = "~/.kube/config"
   exec {
