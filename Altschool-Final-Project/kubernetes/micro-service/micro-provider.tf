@@ -20,7 +20,7 @@ provider "kubernetes" {
   config_path = "~/.kube/config"
   exec {
     api_version = "client.authentication.k8s.io/v1beta1"
-    args        = ["eks", "get-token", "--cluster-name", "hr-dev-eks-demo"]
+    args        = ["eks", "get-token", "--cluster-name", "hr-dev-Altschool-Project"]
     command     = "aws"
   }
 }
