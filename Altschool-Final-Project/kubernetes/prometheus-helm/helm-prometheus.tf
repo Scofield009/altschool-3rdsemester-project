@@ -6,7 +6,7 @@ data "aws_eks_node_group" "eks-node-group" {
 resource "time_sleep" "wait_for_kubernetes" {
 
     depends_on = [
-        data.aws_eks_cluster.hr-dev-eks-demo
+        data.aws_eks_cluster.hr-dev-Altschool-Project
     ]
 
     create_duration = "20s"
