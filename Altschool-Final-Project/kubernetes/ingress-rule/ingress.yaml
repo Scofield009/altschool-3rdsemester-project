@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: external-nginx
   rules:
-  - host: grafana.nwokolo.live
+  - host: grafana.afolabiibikunle.com.ng
     http:
       paths:
       - path: /
