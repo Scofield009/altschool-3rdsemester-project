@@ -1,5 +1,5 @@
 data "aws_eks_node_group" "eks-node-group" {
-  cluster_name = "hr-dev-eks-demo"
+  cluster_name = "hr-dev-Altschool-Project"
   node_group_name = "hr-dev-eks-ng-public"
 }
 
