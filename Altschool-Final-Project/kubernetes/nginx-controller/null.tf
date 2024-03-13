@@ -23,10 +23,9 @@ resource "aws_route53_zone" "hosted_zone" {
 
 locals {
   instances = {
-    namea = "sock-shop.${var.domain_name}"
-    nameb = "voting-app.${var.domain_name}"
-    named = "grafana.${var.domain_name}"
-    namee = "result.${var.domain_name}"
+    namea = "sock-shop.${var.domain_name}"    
+    nameb = "grafana.${var.domain_name}"
+    
   }
 }
 
