@@ -25,19 +25,6 @@ pipeline {
             }
         }
 
-        stage("Deploy voting-app to EKS") {
-             when {
-                expression { params.ENVIRONMENT == 'create' }
-            }
-            steps {
-                script {
-                    dir('kubernetes/voting-app') {
-                        sh "terraform init"
-                        sh "terraform apply -auto-approve"
-                    }
-                }
-            }
-        }
 
         stage("Deploy sock-shop to EKS") {
              when {
@@ -96,18 +83,6 @@ pipeline {
             }
         }
 
-        stage("Destroy voting-app in EKS") {
-             when {
-                expression { params.ENVIRONMENT == 'destroy' }
-            }
-            steps {
-                script {
-                    dir('kubernetes/voting-app') {
-                        sh "terraform destroy -auto-approve"
-                    }
-                }
-            }
-        }
 
         stage("Destroy sock-shop in EKS") {
              when {
